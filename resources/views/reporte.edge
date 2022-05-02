@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="C:\sistema\SRI\resources\views\css\stlye.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+       
+
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="barra-de-navegacao">
+                        <a href="index.html">
+                            <img id="logo" src="css\sri.png" alt="S.R.I">
+                        </a>
+                        <ul>
+                            <li><a href="pagina_principal.html">Inicio</a></li>
+                            <li><a href="#">Incidentes Resolvidos</a></li>
+                            <li><a href="pagina_reporte.html">Registrar Incidente</a></li>
+                            <li><a href="pagina_perfil.html">perfil</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div> 
+       
+        <br> </br><br> </br>
+    
+        <section>
+            <center>
+                <h2>Registre o incidente</h2>
+            </center>
+            <br> </br>
+        <div class="absolute">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Coloque o título do incidente </label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Risco de queda no corrimão do 2º andar">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Insira uma descrição</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ex: No 2º andar um dos corrimões esta balançando possivelmente pode quebrar."  ></textarea>
+              </div>
+
+              <img src="Galeria.png" class="img-fluid"  alt="Image" height="42" width="42"><a><h5>Adicionar imagem</h5></a>
+              </a>
+              <p></p>
+              <form>
+                <fieldset >
+                  <div class="mb-3">
+                    <label for="disabledSelect" class="form-label">Selecione uma categoria</label>
+                    <select id="disabledSelect" class="form-select">
+                      <option>Segurança</option>
+                      <option>Infraestrutura </option> 
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Registrar</button>
+                </fieldset>
+              </form>
+        </section>
+    </div>
+    </body>
+</html>
