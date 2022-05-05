@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
@@ -24,37 +24,23 @@
 
     <center>
 
-        <form action="{{route('storee')}}" method='POST'> 
+        <form action="{{ route('estore')}}" method='POST'> 
         <div id="cadastro">
-
             <h1>Cadastro</h1>
-            <!--
-            <p>
-                <input id="name_cad" name="nome" required="required" type="text" placeholder="Nome completo" />
-            </p>
-            -->
+    
             <p>
                 <input id="email_cad" name="email" required="required" type="email" placeholder="E-mail" />
             </p>
-            <!--
-                <p>
-                    <input id="matricula_cad" name="matricula_cad" required="required" type="matricula" placeholder="Numero de matricula" />
-                </p>
-            -->
             <p>
                 <input id="password_cad" name="password" required="required" type="password" placeholder="Senha" />
             </p>
 
             <p>
-
                 <a href="{{route('login')}}">
                     <input type="submit" value="Cadastrar" />
                 </a>
             </p>
-
-            <p class="link">
-
-                Ja tem conta?
+            <p class="link"> Ja tem conta?
                 <a href="{{route('login')}}"> Clique aqui</a>
             </p>
 
@@ -64,7 +50,7 @@
                     esqueceu sua senha?
                 </a>
             </p>
-
+        </form>
         </div>
     </center>
 </body>
