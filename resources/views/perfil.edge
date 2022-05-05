@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <a>
+            <img src="Potato.png" alt="Potato" width="56" height="44">
+            Batata
+
+            <button style="background:#3630a3; color:white;"
+            onclick="alert ('Retornando')">
+            Inicio
+            </button>
+
+            <button style="background:#a33030; color:white;"
+            onclick="alert('Conta Fechada com sucesso')">
+            Logout
+            </button>
+        </a>
+
+        <style> .container {
+            max-width: 1920px;
+            width: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(8, 8, 8);
+          }
+          
+          
+          .absolute {
+            text-align: center;
+            }
+          
+          /* header */
+          header {
+            position: relative;
+            top: 0;
+            height: auto;
+            width: 100%;
+          }
+          
+          
+          nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 80px;
+            width: 100%;
+            z-index: 1;
+            background-color: #FFF;
+            border-bottom: 1px solid #CCC;
+          }
+          
+          
+          .barra-de-navegacao {
+            max-width: 1200px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          #logo {
+            width: 50px;
+            height: 50px;
+            margin-top: 25px;
+          }
+          
+          .barra-de-navegacao ul {
+            float: right;
+            height: 100px;
+            line-height: 100px;
+            margin: 0;
+          }
+          
+          .barra-de-navegacao ul li {
+            list-style: none;
+            float: left;
+            margin: 0 15px;
+          }
+          
+          .barra-de-navegacao li a {
+            text-decoration: none;
+            color: #666;
+            transition: .5s;
+          }
+          
+          .barra-de-navegacao li a:hover {
+            color: #3381f3;
+          } </style>
+    </head>
+
+
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="barra-de-navegacao">
+                        <a href="index.html">
+                            <img id="logo" src="C:\sistema\SRI\resources\views\css\sri.png" alt="S.R.I">
+                        </a>
+                        <ul>
+                            <li><a href="{{ route('principal')}}">Inicio</a></li>
+                            <li><a href="#">Incidentes Resolvidos</a></li>
+                            <li><a href="{{route('reporte')}}">Registrar Incidente</a></li>
+                            <li><a href="{{route('perfil')}}">perfil</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <br></br><br></br>
+        <a><br>
+            <fieldset>
+                <br>
+                <center>
+                   <br>
+                </center>
+
+                <br>
+
+                <center>
+                    email@email.com<br>
+                </center>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <center>
+                    <h2>
+                        Seus Reportes<br>
+                    </h2>
+                </center>
+
+                <br>
+
+                <b><h3>Titulo 1</h3></b> 
+                <h4>descrição</h4>
+
+                <img src="Galeria.png" alt="Galeria" width="200" height="200">
+
+                <b><h3>Titulo 2</h3></b> 
+                <h4>descrição2</h4>
+
+                <img src="Galeria.png" alt="Galeria" width="200" height="200">
+            </fieldset>
+        </a>
+    </body>
+
+</html> 

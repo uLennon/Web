@@ -6,7 +6,7 @@ export default class Reporte extends BaseModel {
   public id: number
   
   @column()
-  public name: string
+  public titulo: string
 
   @column()
   public descricao: string

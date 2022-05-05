@@ -89,10 +89,10 @@
                       <img id="logo" src="C:\sistema\SRI\resources\views\css\sri.png" alt="S.R.I">
                   </a>
                   <ul>
-                      <li><a href="pagina_principal.html">Inicio</a></li>
+                      <li><a href="{{ route('principal')}}">Inicio</a></li>
                       <li><a href="#">Incidentes Resolvidos</a></li>
-                      <li><a href="pagina_reporte.html">Registrar Incidente</a></li>
-                      <li><a href="pagina_perfil.html">perfil</a></li>
+                      <li><a href="{{route('reporte')}}">Registrar Incidente</a></li>
+                      <li><a href="{{route('perfil')}}">perfil</a></li>
                   </ul>
               </div>
           </nav>
@@ -116,9 +116,9 @@
     <br></br>
         
     <div class="card">
-        <h5 class="card-header">Titulo do Incidente #1</h5>
+        <h5 class="card-header">{{reporte.titulo}}</h5>
         <div class="card-body">
-          <p class="card-text">Descrição do incidente 1.</p>
+          <p class="card-text">{{reporte.descricao}}.</p>
           <a href="#" class="btn btn-primary">UP</a>
         </div>
       </div>

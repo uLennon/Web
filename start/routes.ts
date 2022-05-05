@@ -22,14 +22,18 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/login','SrisController.login').as('login')
 Route.post('/login','SrisController.store').as('store')
+
 Route.group(()=>{
     Route.get('/principal','SrisController.principal').as('principal')
     Route.get('/reporte','SrisController.reporte').as('reporte')
 }).middleware('auth')
 
+Route.post('/reporte','SrisController.reportar').as('reportar')
 
 
 Route.get('/registro','SrisController.registro').as('registro')
 Route.post('/registro','SrisController.estore').as('estore')
 
+
+Route.get('/perfil','SrisController.perfil').as('perfil')
 Route.get('/logout','SrisController.delete').as('delete')
