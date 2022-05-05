@@ -24,29 +24,30 @@
 
     <center>
 
+        <form action="{{route('storee')}}" method='POST'> 
         <div id="cadastro">
 
             <h1>Cadastro</h1>
-
+            <!--
             <p>
-                <input id="name_cad" name="name_cad" required="required" type="text" placeholder="Nome completo" />
+                <input id="name_cad" name="nome" required="required" type="text" placeholder="Nome completo" />
+            </p>
+            -->
+            <p>
+                <input id="email_cad" name="email" required="required" type="email" placeholder="E-mail" />
+            </p>
+            <!--
+                <p>
+                    <input id="matricula_cad" name="matricula_cad" required="required" type="matricula" placeholder="Numero de matricula" />
+                </p>
+            -->
+            <p>
+                <input id="password_cad" name="password" required="required" type="password" placeholder="Senha" />
             </p>
 
             <p>
-                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="E-mail" />
-            </p>
 
-            <p>
-                <input id="matricula_cad" name="matricula_cad" required="required" type="matricula" placeholder="Numero de matricula" />
-            </p>
-
-            <p>
-                <input id="password_cad" name="password_cad" required="required" type="password" placeholder="Senha" />
-            </p>
-
-            <p>
-
-                <a href="Login.html">
+                <a href="{{route('login')}}">
                     <input type="submit" value="Cadastrar" />
                 </a>
             </p>
@@ -54,7 +55,7 @@
             <p class="link">
 
                 Ja tem conta?
-                <a href="Login.html"> Clique aqui</a>
+                <a href="{{route('login')}}"> Clique aqui</a>
             </p>
 
             <p class="link">
