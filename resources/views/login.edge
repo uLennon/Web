@@ -23,7 +23,7 @@
     <br><br><br><br>
 
     <center>
-        <form action="{{ route('store')}}" method='POST'>
+        <form action="{{ route('login')}}" method='POST'>
         <div class="content">
             <div id="login">
                 <h1>Login</h1>
@@ -31,6 +31,7 @@
                     <input id='login' name='email' required='required' type='email' placeholder='Email' />
                 </p>
                 <p> <input id='password' name='password' required="required" type='password' placeholder='Senha' /></p>
+                
                 <p>
                     <a href="{{route('principal')}}">
                         <input type="submit" value="Logar" />
