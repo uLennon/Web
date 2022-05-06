@@ -5,7 +5,6 @@ import user from 'App/Models/user'
 
 export default class SrisController {
 
-
     public async storee({view}: HttpContextContract){
         return view.render('login')
     }
@@ -26,9 +25,9 @@ export default class SrisController {
     }
 
     public async principal({view}: HttpContextContract){
-        const reporte = await Reporte.all()
-        console.log(reporte)
-        return view.render('principal',{reporte})
+        const reportes = await Reporte.all()
+        console.log(reportes)
+        return view.render('principal',{reportes: reportes})
     }
 
     public async reporte({view}: HttpContextContract){
@@ -48,7 +47,7 @@ export default class SrisController {
         console.log(email)
         console.log(password)
         
-        const use = await user.create({email, password})
+        await user.create({email, password})
         return view.render('login')
     }
     
@@ -64,7 +63,4 @@ export default class SrisController {
        
         response.redirect().toRoute('principal',{titulo: data.titulo, descricao: data.descricao})
     }
-
-   
-
 }
