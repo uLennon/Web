@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #c04f7c
+}
+
+.card {
+    color: rgb(255, 255, 255);
+    width: 350px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ff5b1f, #ff5b1f);
+    box-shadow: 20px 20px 60px #ff5b1f, -20px -20px 60px #ff5b1f;
+    border: none
+}
+
+.num {
+    color: #eee !important;
+}
+
+.profile_button {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: 0 !important;
+    border-radius: 50px;
+    background: #AB47BC;
+    box-shadow: 28px 28px 57px #933da2, -28px -28px 57px #c351d6;
+}
