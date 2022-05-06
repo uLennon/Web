@@ -44,9 +44,6 @@ export default class SrisController {
         const email = request.input('email')
         const password = request.input('password')
         
-        console.log(email)
-        console.log(password)
-        
         await user.create({email, password})
         return view.render('login')
     }
