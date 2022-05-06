@@ -114,15 +114,15 @@
         </button>
 
     <br></br>
-      
-    <div class="card">
-        <h5 class="card-header">{{titulo}}</h5>
-        <div class="card-body">
-          <p class="card-text">{{descricao}}.</p>
-          <a href="#" class="btn btn-primary">UP</a>
+    @each(reporte in reportes)
+      <div class="card">
+          <h5 class="card-header">{{reporte.titulo}}</h5>
+          <div class="card-body">
+            <p class="card-text">{{reporte.descricao}}.</p>
+            <a href="#" class="btn btn-primary">UP</a>
+          </div>
         </div>
-      </div>
-
+      @endeach
     <br> </br>
 </div>
 </body>
