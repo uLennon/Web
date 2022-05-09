@@ -1,4 +1,3 @@
-import { Request } from '@adonisjs/core/build/standalone'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Database from '@ioc:Adonis/Lucid/Database'
 import Reporte from 'App/Models/Reporte'
@@ -93,7 +92,31 @@ export default class SrisController {
         
         return view.render('resolvido',{reportes:reportes})
         
+    }   
+
+
+    public async voto({view,request}: HttpContextContract){
+         
+        const id = request.input('reporteIdVoto')
+       
+        await Database.rawQuery('update reportes set voto = voto+1 where id = ? ',[id])
+        const reportes = await Database.rawQuery('select * from reportes')
+
+
+        return view.render('principal',{reportes:reportes})
+        
     }
+
+    public async maisVotado({view}: HttpContextContract){
+    
+       
+        const reportes = await Database.rawQuery('select * from reportes order by voto DESC ')
+
+
+        return view.render('principal',{reportes:reportes})
+        
+    }
+
 
     public async resolvidoStore({view,request}: HttpContextContract){
         const id = request.input('reporteId')

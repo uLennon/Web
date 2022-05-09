@@ -40,3 +40,7 @@ Route.get('/logout','SrisController.delete').as('delete')
 
 Route.get('/ro','SrisController.resolvido').as('resolvido')
 Route.post('/resolvido','SrisController.resolvidoStore').as('resolvidoStore')
+
+Route.post('/voto','SrisController.voto').as('voto')
+Route.post('/maisvotado','SrisController.maisVotado').as('maisVotado')
+

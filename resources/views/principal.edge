@@ -103,23 +103,30 @@
     <br></br><br> </br>
     
     <div class="absolute">
+
         <button type="button"  class="btn btn-secondary">
         Em alta
         </button>
         <button type="button" class="btn btn-secondary">
         Novos
         </button>
-        <button type="button" class="btn btn-secondary" >
+      <form action="{{route('maisVotado')}}" method="POST">
+        <button type="submit" class="btn btn-secondary" >
         Mais Votados
         </button>
+      </form>
 
     <br></br>
     @each(reporte in reportes)
       <div class="card">
           <h5 class="card-header">{{reporte.titulo}}</h5>
           <div class="card-body">
-            <p class="card-text">{{reporte.descricao}}.</p>
-            <a href="#" class="btn btn-primary">UP</a>
+            <p class="card-text">{{reporte.descricao}}</p>
+            <a>{{reporte.voto}}</a>
+            <form action="{{route('voto')}}" method="POST">
+              <input type="hidden" name="reporteIdVoto" value="{{reporte.id}}"/>
+            <button type="submit"  class="btn btn-secondary"> UP</button>
+            </form>
            @if(admin==1) 
             <form action="{{route('resolvidoStore')}}" method="POST">
               <input type="hidden" name="reporteId" value="{{reporte.id}}"/>

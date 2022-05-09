@@ -6,6 +6,9 @@ export default class Reporte extends BaseModel {
   public id: number
 
   @column()
+  public voto: number
+
+  @column()
   public titulo: string
 
   @column()

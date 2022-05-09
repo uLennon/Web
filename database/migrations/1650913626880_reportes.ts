@@ -9,6 +9,7 @@ export default class Reportes extends BaseSchema {
       table.string('titulo')
       table.string('descricao')
       table.boolean('resolvido').defaultTo(false)
+      table.integer('voto').defaultTo(0)
 
     
 
