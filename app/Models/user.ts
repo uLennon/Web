@@ -7,6 +7,9 @@ export default class user extends BaseModel {
   public id: number
 
   @column()
+  public admin: boolean 
+
+  @column()
   public email: string
 
   @column({ serializeAs: null })

@@ -8,6 +8,8 @@ export default class Reportes extends BaseSchema {
       table.increments('id').primary()
       table.string('titulo')
       table.string('descricao')
+      table.boolean('resolvido').defaultTo(false)
+
     
 
       /**

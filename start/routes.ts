@@ -36,3 +36,7 @@ Route.post('/reporte','SrisController.registrar').as('registrar')
 
 Route.get('/perfil','SrisController.perfil').as('perfil')
 Route.get('/logout','SrisController.delete').as('delete')
+
+
+Route.get('/ro','SrisController.resolvido').as('resolvido')
+Route.post('/resolvido','SrisController.resolvidoStore').as('resolvidoStore')

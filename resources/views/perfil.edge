@@ -116,7 +116,16 @@
                 <br>
 
                 <center>
-                    email@email.com<br>
+                    {{ auth.user.email }}<br>
+                    @if(!auth.isLoggedIn)
+                    <div >
+                      <a href="{{ route('create') }}" >Sign In</a>
+                    </div>
+                  @else
+                    <div >
+                      <a href="{{ route('delete') }}" >Logout</a>
+                    </div>
+                  @endif
                 </center>
             </fieldset>
             <br>
@@ -128,8 +137,8 @@
                 </center>
                 <br>
                 @each(reporte in reportes)
-                  <b><h3>{{reporte.titulo}}</h3></b> 
-                  <h4>{{reporte.descrição}}</h4>
+                <center> <b><h3>{{reporte.titulo}}</h3></b> </center>
+                <center> <h4>{{reporte.descrição}}</h4></center>
                 @endeach
             </fieldset>
         </a>
