@@ -22,8 +22,6 @@ export default class SrisController {
         }
       }
 
-
-
         try{
             await auth.use('web').attempt(email,password)
             response.redirect().toRoute('principal',{admin:admin,reportes:reportes})
@@ -107,23 +105,44 @@ export default class SrisController {
         
     }
 
-    public async maisVotado({view}: HttpContextContract){
+    public async maisVotado({view,auth}: HttpContextContract){
     
-       
         const reportes = await Database.rawQuery('select * from reportes order by voto DESC ')
+        var authaux = auth.user?.email
+    
+        const user = await Database.rawQuery('select admin from users where email = ? and admin = 1',[authaux? authaux : ''])
+    
+        var admin = 0
+    
+        for (const usery in user) {
+          if(usery == '0'){
+            admin = 1
+          }
+        }
 
-
-        return view.render('principal',{reportes:reportes})
+        return view.render('principal',{reportes:reportes,admin:admin})
         
     }
 
 
-    public async resolvidoStore({view,request}: HttpContextContract){
+    public async resolvidoStore({view,request,auth}: HttpContextContract){
         const id = request.input('reporteId')
        
         await Database.rawQuery('update reportes set resolvido = 1 where id = ? ',[id])
         const reportes = await Database.rawQuery('select * from reportes where resolvido = 0')
+
+        var authaux = auth.user?.email
+    
+        const user = await Database.rawQuery('select admin from users where email = ? and admin = 1',[authaux? authaux : ''])
+    
+        var admin = 0
+    
+        for (const usery in user) {
+          if(usery == '0'){
+            admin = 1
+          }
+        }
         
-        return view.render('principal',{reportes:reportes})
+        return view.render('principal',{reportes:reportes,admin:admin})
     }
 }
