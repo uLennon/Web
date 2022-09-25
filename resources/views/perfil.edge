@@ -2,88 +2,179 @@
 
 <html>
     <head>
-        <a>
-            <button style="background:#3630a3; color:white;"
-            onclick="alert ('Retornando')">
-            Inicio
-            </button>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-            <button style="background:#a33030; color:white;"
-            onclick="alert('Conta Fechada com sucesso')">
-            Logout
-            </button>
-        </a>
+        <style>
+          .container {
+             max-width: 1920px;
+             width: 100%;
+             position: relative;
+             margin-left: auto;
+             margin-right: auto;
+             color: rgb(8, 8, 8);
+           }
+           
+           
+           .absolute {
+             text-align: center;
+             }
+           
+           /* header */
+           header {
+             position: relative;
+             top: 0;
+             height: auto;
+             width: 100%;
+           }
+           
+           
+           nav {
+             position: fixed;
+             top: 0;
+             left: 0;
+             height: 80px;
+             width: 100%;
+             z-index: 1;
+             background-color: #FFF;
+             border-bottom: 1px solid #CCC;
+           }
+           
+           
+           .barra-de-navegacao {
+             max-width: 1200px;
+             position: relative;
+             margin-left: auto;
+             margin-right: auto;
+           }
+           
+           #logo {
+             width: 50px;
+             height: 50px;
+             margin-top: 25px;
+           }
+           
+           .barra-de-navegacao ul {
+             float: right;
+             height: 100px;
+             line-height: 100px;
+             margin: 0;
+           }
+           
+           .barra-de-navegacao ul li {
+             list-style: none;
+             float: left;
+             margin: 0 15px;
+           }
+           
+           .barra-de-navegacao li a {
+             text-decoration: none;
+             color: #666;
+             transition: .5s;
+           }
+           
+           .barra-de-navegacao li a:hover {
+             color: #3381f3;
+           } 
 
-        <style> .container {
-            max-width: 1920px;
-            width: 100%;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            color: rgb(8, 8, 8);
-          }
-          
-          
-          .absolute {
-            text-align: center;
-            }
-          
-          /* header */
-          header {
-            position: relative;
-            top: 0;
-            height: auto;
-            width: 100%;
-          }
-          
-          
-          nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 80px;
-            width: 100%;
-            z-index: 1;
-            background-color: #FFF;
-            border-bottom: 1px solid #CCC;
-          }
-          
-          
-          .barra-de-navegacao {
-            max-width: 1200px;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
-          #logo {
-            width: 50px;
-            height: 50px;
-            margin-top: 25px;
-          }
-          
-          .barra-de-navegacao ul {
-            float: right;
-            height: 100px;
-            line-height: 100px;
-            margin: 0;
-          }
-          
-          .barra-de-navegacao ul li {
-            list-style: none;
-            float: left;
-            margin: 0 15px;
-          }
-          
-          .barra-de-navegacao li a {
-            text-decoration: none;
-            color: #666;
-            transition: .5s;
-          }
-          
-          .barra-de-navegacao li a:hover {
-            color: #3381f3;
-          } </style>
+           body
+{
+  background-color:#f2f2f2;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+.center
+{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+        #star {
+            margin-left: -5px !important;
+            vertical-align: bottom !important;
+            opacity: 0.5;
+        }
+
+
+        .more {
+            opacity: 0.5 !important;
+        }
+
+        .btn:hover {
+            color: black !important;
+        }
+
+        .vl {
+            margin: 8px !important;
+            width: 2px;
+            border-right: 1px solid #aaaaaa;
+            height: 25px;
+        }
+
+
+        #plus {
+            opacity: 0.8;
+        }
+
+
+        .card {
+            border-radius: 10px !important;
+        }
+
+        a:hover {
+            background-color: #ccc !important;
+        }
+
+
+
+        .btn-outlined:active {
+            color: #FFF;
+            border-color: #fff !important;
+        }
+
+
+        img {
+
+            cursor: pointer;
+            overflow: visible;
+        }
+
+        .btn:focus,
+        .btn:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+	.container{
+	   margin-top:100px !important;
+	}
+  
+
+     </style>
     </head>
 
 
@@ -99,49 +190,43 @@
                             <li><a href="{{ route('principal')}}">Inicio</a></li>
                             <li><a href="{{ route('resolvido')}}">Incidentes Resolvidos</a></li>
                             <li><a href="{{route('reporte')}}">Registrar Incidente</a></li>
-                            <li><a href="{{route('perfil')}}">perfil</a></li>
+                            <li><a href="">{{ auth.user.email }}</a></li>
+                            @if(!auth.isLoggedIn)
+                            <div >
+                              <a href="{{ route('create') }}" >Sign In</a>
+                            </div>
+                          @else
+                              <a href="{{ route('delete') }}" ><button type="button" class="btn btn-dark">Logout</button></a>
+                          @endif
+                           
                         </ul>
                     </div>
                 </nav>
             </header>
         </div>
-        <br></br><br></br>
-        <a><br>
-            <fieldset>
-                <br>
-                <center>
-                   <br>
-                </center>
-
-                <br>
-
-                <center>
-                    {{ auth.user.email }}<br>
-                    @if(!auth.isLoggedIn)
-                    <div >
-                      <a href="{{ route('create') }}" >Sign In</a>
+        
+       <center><h2>Seus reportes</h2></center>
+    
+        @each(reporte in reportes)
+        <div class="container">
+            <div class="card mt-5 border-5 pt-2 active pb-0 px-3">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <h4 class="card-title "><b>{{reporte.titulo}}</b></h4>
+                        </div>
+                        <div class="col">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <p class="card-text text-muted small ">
+                                    <img src="https://img.icons8.com/metro/26/000000/star.png" class="mr-1 " width="19"
+                                        height="19" id="star"> <span class="vl mr-2 ml-0"></span>
+                                        {{reporte.descricao}}</p>
+                            </h6>
+                        </div>
                     </div>
-                  @else
-                    <div >
-                      <a href="{{ route('delete') }}" >Logout</a>
-                    </div>
-                  @endif
-                </center>
-            </fieldset>
-            <br>
-            <fieldset>
-                <center>
-                    <h2>
-                        Seus Reportes<br>
-                    </h2>
-                </center>
-                <br>
-                @each(reporte in reportes)
-                <center> <b><h3>{{reporte.titulo}}</h3></b> </center>
-                <center> <h4>{{reporte.descricao}}</h4></center>
-                @endeach
-            </fieldset>
-        </a>
+                </div>
+        </div>
+        @endeach
     </body>
 
 </html> 
