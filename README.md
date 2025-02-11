@@ -6,7 +6,7 @@ Sistema para reportar incidentes de segurança. A aplicação permite que usuár
 
 - **AdonisJS**: Framework MVC para Node.js que proporciona uma estrutura robusta para o desenvolvimento de aplicações web.
 - **Node.js**: Plataforma para execução do código JavaScript no servidor.
-- **TypeScript**: Linguaguem escolhida para o desenvolvimento.
+- **TypeScript**: Linguagem escolhida para o desenvolvimento.
 
 ## Dependências
 
